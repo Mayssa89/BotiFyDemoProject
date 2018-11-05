@@ -48,8 +48,6 @@ public class ExcelUtils {
 
 			ExcelWSheet = ExcelWBook.getSheet(SheetName);
 
-			Utils.logger.info("Excel sheet opened");
-
 		} catch (Exception e) {
 
 			Utils.logger.error("Class ExcelUtils | Method setExcelFile | Exception desc :" + e.getMessage());
@@ -153,9 +151,6 @@ public class ExcelUtils {
 		try {
 
 			int RowCount = ExcelWSheet.getLastRowNum();
-
-			Utils.logger.info("Total number of Row used return as &lt; " + RowCount + " &gt;.");
-
 			return RowCount;
 
 		} catch (Exception e) {

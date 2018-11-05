@@ -12,8 +12,8 @@ public class Constants {
 	 */
 
 	public static final String LOG4J_FILE = "./config/log4j.xml";
-	public static final String PATH_TESTDATA = "./datasource/";
-	public static final String FILE_TESTDATA = "googleserach.xlsx";
+	public static final String PATH_TESTDATA = "./src/test/resources/";
+	public static final String FILE_TESTDATA = "DataSource.xlsx";
 	public static final String BOOK_NAME = "Sheet1";
 
 	/*
@@ -24,4 +24,10 @@ public class Constants {
 	public static final String CHROME = "CHROME";
 	public static final String FIREFOX = "FIREFOX";
 	public static final String IE = "IE";
+
+	// **************** Colum number of each property
+
+	public static final int COL_TESTCASE_NAME = 0;
+	public static final int COL_BROWSER = 1;
+	public static final int COL_QUERY = 2;
 }
