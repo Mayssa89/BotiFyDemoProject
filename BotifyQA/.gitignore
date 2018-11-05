@@ -5,5 +5,9 @@ build/*
 /.classpath
 /bin/
 /.gradle/
+<<<<<<< HEAD
 /$HOME
 test-output/*
+=======
+/$HOME
+>>>>>>> refs/heads/develop
