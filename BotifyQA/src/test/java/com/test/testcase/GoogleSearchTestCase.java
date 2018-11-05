@@ -2,28 +2,28 @@ package com.test.testcase;
 
 import org.testng.annotations.Test;
 
+import com.test.actions.SeleniumActionsKeyWords;
+import com.test.utilities.Constants;
 
-import com.test.utilities.ExcelUtils;
 import org.testng.annotations.BeforeMethod;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
-
 /*
- * This class ist the test class
+ *  This class ist the test class
  *  for google search scenario
  * 
  */
-public class GoogleSearchTestCase {
+public class GoogleSearchTestCase{
 
-	static WebDriver driver;
-	static WebDriverWait wait;
-	public static String sTestCaseName;
+	
+	public static String testcasename;
 	public static boolean ispassed = true;
 
 	@Test
 	public void searchAction() {
 		
+		/*
+		 * set search input of google with value from Test Data
+		 */
 	}
 
 	/*
@@ -32,7 +32,8 @@ public class GoogleSearchTestCase {
 	@BeforeMethod
 	public void beforeMethod() {
 	
-
+		SeleniumActionsKeyWords.initWebDriver(Constants.CHROME);
+		SeleniumActionsKeyWords.initAppModel();
 	}
 	
 /*
@@ -40,7 +41,8 @@ public class GoogleSearchTestCase {
  */
 	@AfterMethod
 	public void afterMethod() {
-		
-		
+		SeleniumActionsKeyWords.cleanDriver();
 	}
+	
+
 }

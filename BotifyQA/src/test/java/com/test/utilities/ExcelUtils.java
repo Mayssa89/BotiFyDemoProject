@@ -29,7 +29,7 @@ public class ExcelUtils {
 	private static XSSFCell Cell;
 
 	private static XSSFRow Row;
-	public final static Log logger = LogFactory.getLog(GoogleSearchTestCase.class);
+	
 /*
  * This method is to set the File path and to open the Excel file, Pass Excel Path and Sheetname as Arguments to this method
  */
@@ -48,11 +48,11 @@ public class ExcelUtils {
 
 			ExcelWSheet = ExcelWBook.getSheet(SheetName);
 
-			logger.info("Excel sheet opened");
+			Utils.logger.info("Excel sheet opened");
 
 		} catch (Exception e) {
 
-			logger.error("Class ExcelUtils | Method setExcelFile | Exception desc :" + e.getMessage());
+			Utils.logger.error("Class ExcelUtils | Method setExcelFile | Exception desc :" + e.getMessage());
 			GoogleSearchTestCase.ispassed = false;
 		}
 
@@ -72,7 +72,7 @@ public class ExcelUtils {
 
 		} catch (Exception e) {
 			GoogleSearchTestCase.ispassed = false;
-			logger.error("Class ExcelUtils | Method getCellData | Exception desc :" + e.getMessage());
+			Utils.logger.error("Class ExcelUtils | Method getCellData | Exception desc :" + e.getMessage());
 			return "";
 
 		}
@@ -114,7 +114,7 @@ public class ExcelUtils {
 
 		} catch (Exception e) {
 			GoogleSearchTestCase.ispassed = false;
-			logger.error("Class ExcelUtils | Method setcellData | Exception desc :" + e.getMessage());
+			Utils.logger.error("Class ExcelUtils | Method setcellData | Exception desc :" + e.getMessage());
 
 		}
 
@@ -140,7 +140,7 @@ public class ExcelUtils {
 
 		} catch (Exception e) {
 
-			logger.error("Class ExcelUtil | Method getRowContains | Exception desc : " + e.getMessage());
+			Utils.logger.error("Class ExcelUtil | Method getRowContains | Exception desc : " + e.getMessage());
 
 			GoogleSearchTestCase.ispassed = false;
 			return 0;
@@ -154,13 +154,13 @@ public class ExcelUtils {
 
 			int RowCount = ExcelWSheet.getLastRowNum();
 
-			logger.info("Total number of Row used return as &lt; " + RowCount + " &gt;.");
+			Utils.logger.info("Total number of Row used return as &lt; " + RowCount + " &gt;.");
 
 			return RowCount;
 
 		} catch (Exception e) {
 
-			logger.error("Class ExcelUtil | Method getRowUsed | Exception desc : " + e.getMessage());
+			Utils.logger.error("Class ExcelUtil | Method getRowUsed | Exception desc : " + e.getMessage());
 			GoogleSearchTestCase.ispassed = false;
 			return 0;
 
