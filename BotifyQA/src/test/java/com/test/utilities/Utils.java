@@ -1,9 +1,12 @@
 package com.test.utilities;
 
+import static org.testng.Assert.fail;
+
 import java.awt.Desktop.Action;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.testng.Assert;
 
 import com.test.actions.SeleniumActionsKeyWords;
 import com.test.pageobjects.GooglePageObject;
@@ -37,13 +40,15 @@ public class Utils {
 	{
 		try {
 		int total_rows=GooglePageObject.result_container.findElements(SeleniumActionsKeyWords.getLocator(GooglePageObject.result_entry)).size();
-
+logger.info(total_rows);
 	if(total_rows!=10) {
 		logger.error("Result page should display 10 result entries");
 		GoogleSearchTestCase.ispassed=false;
+		Assert.fail("Total rows count not equal to 10");
 	}
 	else {
 		logger.info("Checkpoint is PASSED");
+		
 		
 	}
 		}

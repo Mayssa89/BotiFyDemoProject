@@ -10,7 +10,7 @@ public class Constants {
 	/*
 	 * Configuration constants
 	 */
-	public static final String PATH_TESTDATA = "./resources/";
+	public static final String PATH_TESTDATA = "./TestData/";
 	public static final String FILE_TESTDATA = "DataSource.xlsx";
 	public static final String BOOK_NAME = "Sheet1";
 
@@ -28,4 +28,5 @@ public class Constants {
 	public static final int COL_TESTCASE_NAME = 0;
 	public static final int COL_BROWSER = 1;
 	public static final int COL_QUERY = 2;
+	public static final int COL_RESULT = 3;
 }

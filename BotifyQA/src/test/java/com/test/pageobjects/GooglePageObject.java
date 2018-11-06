@@ -16,11 +16,11 @@ public class GooglePageObject {
 	public static WebElement search_btn;
 	
 	
-	@FindBy(how=How.XPATH,using="//div[@class='srg']")
+	@FindBy(how=How.ID,using="rso")
 	@CacheLookup
 	public static WebElement result_container;
 
-	@FindBy(how=How.XPATH,using="//div[@class='g']")
+	@FindBy(how=How.XPATH,using="//div[@class='srg']/div")
 	@CacheLookup
 	public static WebElement result_entry;
 }

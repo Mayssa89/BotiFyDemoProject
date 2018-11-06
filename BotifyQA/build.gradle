@@ -40,6 +40,8 @@ task wrapper(type: Wrapper) {
      gradleVersion = '2.14'
 }
 test {
+dependsOn 'cleanTest'
+test.outputs.upToDateWhen {false}
 	// set heap size for the test JVM(s)
    		minHeapSize = "128m"
    		maxHeapSize = "512m"
@@ -59,7 +61,6 @@ tasks.withType(Test) {
 }
 // This task will launch tests included in testNG xml file
 task TestCaseGoogle(type:Test,dependsOn:'test'){
-dependsOn 'cleanTest'
 group="BotiFyTestsLaunhers"
 description="this launcher for Google Test Cases"
 useTestNG(){
