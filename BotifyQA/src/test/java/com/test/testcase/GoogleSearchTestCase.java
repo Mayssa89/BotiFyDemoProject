@@ -12,8 +12,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.AfterMethod;
 /*
- *  This class ist the test class
- *  for google search scenario
+ *  This class is the test class
+ *  for google search Use case
  * 
  */
 public class GoogleSearchTestCase{
@@ -24,7 +24,6 @@ public class GoogleSearchTestCase{
 	public void searchAction(int index, String name) throws Exception {
 
 		Utils.startTestCase(name);
-		
 		/*
 		 * Set the query into search input and submit the form
 		 */

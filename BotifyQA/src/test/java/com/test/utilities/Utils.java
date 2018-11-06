@@ -14,7 +14,6 @@ import com.test.testcase.GoogleSearchTestCase;
  */
 public class Utils {
 
-	
 	public final static Log logger = LogFactory.getLog(GoogleSearchTestCase.class);
 	
 	public static void setDataSourceFile() {

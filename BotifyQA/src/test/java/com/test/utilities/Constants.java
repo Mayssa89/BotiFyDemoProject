@@ -10,9 +10,7 @@ public class Constants {
 	/*
 	 * Configuration constants
 	 */
-
-	public static final String LOG4J_FILE = "./config/log4j.xml";
-	public static final String PATH_TESTDATA = "./src/test/resources/";
+	public static final String PATH_TESTDATA = "./resources/";
 	public static final String FILE_TESTDATA = "DataSource.xlsx";
 	public static final String BOOK_NAME = "Sheet1";
 

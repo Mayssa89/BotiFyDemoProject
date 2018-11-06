@@ -34,7 +34,7 @@ compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
 	compile 'log4j:log4j:1.2.17'
 	compile 'commons-logging:commons-logging:1.2'
 	
-	
+	compile files('./resources')
 }
 task wrapper(type: Wrapper) {
      gradleVersion = '2.14'
@@ -52,7 +52,6 @@ test {
 }
 
 tasks.withType(Test) {
-dependsOn 'cleanTest'
     testLogging {
         events "standardOut", "started", "passed", "skipped", "failed"
     }
@@ -60,6 +59,7 @@ dependsOn 'cleanTest'
 }
 // This task will launch tests included in testNG xml file
 task TestCaseGoogle(type:Test,dependsOn:'test'){
+dependsOn 'cleanTest'
 group="BotiFyTestsLaunhers"
 description="this launcher for Google Test Cases"
 useTestNG(){
